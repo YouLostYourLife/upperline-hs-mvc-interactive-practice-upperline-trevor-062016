@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ben's Sleep Reminder App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="clouds">
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+  <div class="container">
+<h2>Welcome to Sleep Reminder</h2>
+<p>This app helps you fall asleep on time and at a reasonable time.
+  First, establish some settings to help you get started. You can
+  always change these later.</p>
+
+<br>
+
+<p>First, select which days of the week you want these settings to apply to. (You can choose more than one).</p>
+
+<form method="POST" action="/hub">
+<label class="checkbox-inline"><input type="checkbox" value="Monday Night" name="monday_night">Monday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Tuesday Night" name="tuesday_night">Tuesday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Wednesday Night" name="wednesday_night">Wednesday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Thursday Night" name="thursday_night">Thursday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Friday Night" name="friday_night">Friday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Saturday Night" name="saturday_night">Saturday nights</label>
+<label class="checkbox-inline"><input type="checkbox" value="Sunday Night" name="sunday_night">Sunday nights</label>
+
+<br><br>
+
+<p><strong>Setting 1: Select the time you want to go to bed:</strong></p>
+
+  <div class="radio">
+  <label><input type="radio" value="8:00 pm" name="optradio_setting1">8:00 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="8:15 pm" name="optradio_setting1">8:15 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="8:30 pm" name="optradio_setting1">8:30 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="8:45 pm" name="optradio_setting1">8:45 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="9:00 pm" name="optradio_setting1">9:00 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="9:15 pm" name="optradio_setting1">9:15 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="9:30 pm" name="optradio_setting1">9:30 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="9:45 pm" name="optradio_setting1">9:45 pm</label>
+</div>
+<div class="radio">
+  <label><input type="radio" value="10:00 pm" name="optradio_setting1">10:00 pm</label>
+</div>
+
+<br><br>
+
+<p><strong>Setting 2: Select how long you want to be asleep for:</strong></p>
+
+<label class="radio-inline"><input type="radio" value="8 hrs" name="optradio_setting2">8 hrs</label>
+<label class="radio-inline"><input type="radio" value="8.5 hrs" name="optradio_setting2">8.5 hrs</label>
+<label class="radio-inline"><input type="radio" value="9 hrs" name="optradio_setting2">9 hrs</label>
+<label class="radio-inline"><input type="radio" value="9.5 hrs" name="optradio_setting2">9.5 hrs</label>
+<label class="radio-inline"><input type="radio" value="10 hrs" name="optradio_setting2">10 hrs</label>
+
+<br><br>
+
+<p><strong>Setting 3: Check the boxes on the way(s) you want to be alerted:</strong></p>
+
+<label class="checkbox-inline"><input type="checkbox" value="Text" name="optradio_setting3">Text</label>
+<label class="checkbox-inline"><input type="checkbox" value="Alert" name="optradio_setting3">Alert</label>
+<label class="checkbox-inline"><input type="checkbox" value="Alarm" name="optradio_setting3">Alarm</label>
+
+<br><br>
+
+<p><strong>Setting 4: Select how you want to be woken up.</strong></p>
+
+<div class="form-group">
+  <label for="sel1">Select one:</label>
+  <select class="form-control" id="sel1">
+    <option>Insults</option>
+    <option>Beeping noises</option>
+    <option>Classical music</option>
+    <option>Pop music</option>
+    <option>Jazz music</option>
+    <option>Rock music</option>
+  </select>
+</div>
+
+<div>
+  <p><strong>Setting 5: Type in your phone number to receive texts that remind you when to go to bed:</strong></p>
+<input type="text" name="phone_number">
+</div>
+<br>
+<input type="submit">
+</form>
+
+
+</div>
+</div>
+
+</body>
+</html>
